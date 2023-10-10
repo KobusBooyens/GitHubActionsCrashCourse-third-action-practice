@@ -14,6 +14,8 @@ jobs:
         run: npm ci
       - name: Check linting
         run: npm run lint
+      - name: Run unit tests
+        run: npm test
   test:
     runs-on: ubuntu-latest
     steps:
@@ -28,7 +30,7 @@ jobs:
       - name: Run unit tests
         run: npm test
   deploy:
-    needs: test
+    needs: [lint, test]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
