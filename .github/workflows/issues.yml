@@ -1,4 +1,4 @@
-name: Deploy Project
+name: Issues
 on: issues
 jobs:
   issue-info:
