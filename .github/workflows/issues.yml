@@ -1,0 +1,8 @@
+name: Deploy Project
+on: issues
+jobs:
+  issue-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output Issue context
+        run: echo "${{ toJSON(github}}"
